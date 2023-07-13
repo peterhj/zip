@@ -1005,7 +1005,7 @@ impl<'a> Drop for ZipFile<'a> {
                     Ok(0) => break,
                     Ok(_) => (),
                     Err(e) => {
-                        panic!("Could not consume all of the output of the current ZipFile: {e:?}")
+                        panic!("Could not consume all of the output of the current ZipFile: {:?}", e)
                     }
                 }
             }
